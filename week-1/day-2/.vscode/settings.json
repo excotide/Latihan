@@ -1,0 +1,17 @@
+{
+    "javascript.suggest.enabled": false,
+    "typescript.suggest.enabled": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.inlineSuggest.experimental.triggerCommandOnProviderChange": false,
+    "terminal.integrated.suggest.suggestOnTriggerCharacters": false,
+    "editor.suggest.matchOnWordStartOnly": false,
+    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.cycle": false,
+    "editor.inlayHints.enabled": "off",
+    "editor.suggest.showTypeParameters": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    }
+}
