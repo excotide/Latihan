@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",              // Gunakan fitur JS modern seperti optional chaining
+    "module": "commonjs",            // Cocok untuk Node.js
+    "lib": ["ES2020", "DOM"],        // Agar method seperti find() dikenali
+    "strict": true,                  // Aktifkan semua pengecekan ketat
+    "esModuleInterop": true,         // Biar import dari library lebih fleksibel
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true        // Kalau kamu impor file .json
+  },
+  "include": ["./**/*.ts"],          // Pastikan semua file TypeScript diikutkan
+  "exclude": ["node_modules"]
+}
