@@ -1,42 +1,13 @@
+const contacts = require('./contacts')
 
-// try {
-// fs.writeFileSync('data/test.txt', 'hallo world secara synchronus');
-// } catch (e) {
-//     console.log(e)
-// }
+const main = async () => {
+    const nama = await contacts.tulisPertanyaan("Masukkan nama: ")
+    const email = await contacts.tulisPertanyaan("Masukkan email: ")
+    const noHP = await contacts.tulisPertanyaan("Masukkan noHP: ")
 
-// fs.writeFile('data/test.txt', 'hello world secara asynchronus', (err) => {
-//     console.log(err)
-// });
+    contacts.rl.close() 
 
-// const data = fs.readFileSync('data/test.txt', 'utf-8');
-// console.log(data);
+    contacts.simpanContacts(nama, email, noHP)
+}
 
-// fs.readFile('data/test.txt', 'utf-8', (err, data) => {
-//     if (err) console.log(err);
-//     console.log(data)
-// })
-const fs = require('fs')
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-rl.question("masukkan nama anda: ", (nama) => {
-    rl.question("masukkan noHP anda: ", (noHP) => {
-        const contact = { nama, noHP};
-        const file = fs.readFileSync('data/contacts.json', 'utf-8');
-        const contacts = JSON.parse(file);
-
-        contacts.push(contact);
-
-        fs.writeFileSync('data/contacts.json', JSON.stringify(contacts));
-
-        console.log("berhasil memasukkan data");
-        console.log(`data dimasukkan nama: ${contact.nama}, noHP: ${contact.noHP}`);
-
-        rl.close();
-    });
-});
+main()
