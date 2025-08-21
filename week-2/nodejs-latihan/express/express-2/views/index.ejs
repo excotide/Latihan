@@ -1,0 +1,6 @@
+<h1>hallo <%= nama%></h1>
+<div>
+    <% mahasiswa.forEach((mhs, index) => { %>
+        <span><%= index + 1%>. nama: <%= mhs.nama %> - umur: <%= mhs.umur %><br></span>
+    <% }) %>
+</div>

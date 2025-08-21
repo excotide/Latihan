@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Optional: kalau ada file environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional: build folder (React, Next.js, dsb.)
+dist/
+build/
